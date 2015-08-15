@@ -4,18 +4,60 @@
 	<head>
 		<title>The Useful Map</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/style.css">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+    	<link rel="stylesheet" href="css/style.css">
+    	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="js/mapinality.js"></script>
 	</head>
 
-	<body>
-		<div id="header">Google Maps Enhanced</div>
-		<input id="search" type="text" />
-		<div id="map-canvas"></div>
-		<div id="places-box"></div>
+	<body style="">
+		<div class="container-fluid height-hundred">
+			<div class="row" style="height: 50%">
+				<div class="col-md-12">
+					<div id="nav-bar-top">
+						<a class="nb">Link 1</a>
+						<a class="nb">Link 2</a>
+						<a class="nb">Link 3</a>
+
+						<span id="header">Google Maps Made Easy</span>
+					</div>
+
+				</div>
+			</div>
+			<div class="row height-hundred">
+				<div class="col-md-7 height-hundred">
+					<input id="search" type="text" style="display:none" />
+					<div id="map-canvas"></div>
+				</div>
+				<div class="col-md-5 height-hundred">
+					<div id="number-of-results" class="text-center"></div>
+					<div id="places-box"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div id="review-modal" class="modal">
+						<div id="mod-con" class="modal-content">
+							<div class="modal-header">
+								<h1>Reviews For</h1><span id="modal-place-name"></span>
+							</div>
+							<div id="review-modal-scroll" class="modal-body modal-body-scroll">
+								
+							</div>
+
+							<div class="modal-footer">
+								<button class="btn-primary" onclick="$('#review-modal').modal('hide');">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</body>
 
 </html>

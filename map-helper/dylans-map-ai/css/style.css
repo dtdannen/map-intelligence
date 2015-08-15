@@ -3,15 +3,12 @@ html {
 }
 body {
 	width: 100%;
-	height: 100%;
-	background: #080016;
+	height: 75%;
 }
 #header {
-	margin-top: 5%;
-	text-align: center;
-	font-size: 230%;
+	font-size: 200%;
 	color: silver;
-	margin-bottom: 3%;
+	margin-left: 10%;
 }
 #search {
 	height: 23px;
@@ -23,15 +20,72 @@ body {
 	text-overflow: ellipsis;
 	width: 400px;
 }
+#places-box {
+	height: 100%;
+	margin-top: 2%;
+	overflow-y: auto;
+}
 #places-box div {
 	margin-top: 2%;
-	border: 1px solid white;
-	width: 50%;
 	margin: 0 auto;
-	color: white;
+	border: 1px solid silver;
+	width: 100%;
+	color: black;
 }
 #map-canvas {
+	margin-top: 5%;
+	width: 100%;
+	height:100%;
+}
+#nav-bar-top {
+	background-color: #0A0A0F;
+	padding: 5%;
+	font-size: 175%;
+
+}
+#number-of-results {
+	color: #222227;
+	font-size: 200%;
+}
+.height-hundred {
+	height: 100%;
+}
+
+.move-up {
+	margin-top: -5%;
+}
+.nb {
+	border: 1px solid white;
+	padding: 2%;
+	border-radius: 10px;
+}
+.nb:hover {
+	background-color: #337ab7;
+	color: #0A0A0F;
+	text-decoration: none;
+}
+a:hover {
+	cursor: pointer;
+}
+.place-div-para {
+	color: teal;
+}
+.place-div-link {
+	color: #0A0A29;
+}
+#mod-con {
+	height: 100%;
+}
+#review-modal {
+	width: 50%;
+	height: 100%;
 	margin: 0 auto;
-	width: 75%;
-	height:75%;
+}
+.modal-body-scroll {
+	overflow-y: auto;
+	max-height: calc(100vh - 200px);
+}
+.review-modal-scroll {
+	height: 100%;
+	width: 100%;
 }
