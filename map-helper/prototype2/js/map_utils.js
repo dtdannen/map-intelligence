@@ -133,3 +133,23 @@ function createGoogleSearch(searchElementId, map) {
 	return new google.maps.places.SearchBox(inputSearch);		
 }
 
+/* 
+ Function that takes in single place object user searched for
+ a callback function to execute once results are in
+ and a service object that contains the method search by radius
+*/
+
+function nearbySearchRadius(place, cb, service) {
+	var request = {
+    	location: place.geometry.location,
+    	radius: '1600',
+    	types: []
+  	};
+
+  	service.nearbySearch(request, cb);
+}
+
+function computeDistance(l1, l2) {
+	return (google.maps.geometry.spherical.computeDistanceBetween(l1, l2) / 1000).toFixed(2);
+}
+

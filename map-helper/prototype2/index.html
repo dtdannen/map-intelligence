@@ -4,7 +4,8 @@
 	<head>
 		<title></title>
 
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places,geometry"></script>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="js/doubled_javascript_helper_library.js"></script>
@@ -27,8 +28,11 @@
 				margin: 0 auto;
 			}
 			#map-data-table {
-				width: 75%;
-
+				margin: 0 auto;
+			}
+			#start-loc {
+				font-style: italic;
+				color: teal;
 			}
 		</style>
 	</head>
@@ -39,10 +43,15 @@
 		<div id="map-canvas"></div>
 		<input id="google-search">
 		<table id="map-data-table">
-			<tr>
-				<th>Name</th>
-				<th>Miles From<span id="addr"></span></th>
-			</tr>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Distance From <span id="start_loc"></span></th>
+				</tr>
+			</thead>
+			<tbody id="map-data-table-body">
+			</tbody>
+
 		</table>
 	</body>
 </html>
